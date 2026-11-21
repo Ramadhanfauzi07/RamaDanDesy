@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cover" id="cover">
+      <div class="ornament ornament-top"></div>
+      <p class="eyebrow">The Wedding Of</p>
+      <h1 class="cover-names">
+        <span id="cover-pria">Mohamad Ramadhan Fauzi</span>
+        <em>&</em>
+        <span id="cover-wanita">Desi Nur Asipa</span>
+      </h1>
+      <p class="cover-date" id="cover-date">28 agustus 2027</p>
+      <p class="cover-place" id="cover-place">rumah mempelai perempuan</p>
+      <button type="button" class="open-btn" id="open-btn">Buka Undangan</button>
+      <div class="ornament ornament-bottom"></div>
+    </div>
+
+    <main class="invitation" id="invitation" hidden>
+      <section class="hero">
+        <p class="eyebrow">Dengan hormat mengundang</p>
+        <h2 class="script-title">Pernikahan Kami</h2>
+        <div class="names-block">
+          <div>
+            <p class="full-name" id="nama-pria"></p>
+            <p class="parents" id="ortu-pria"></p>
+          </div>
+          <p class="amp">&</p>
+          <div>
+            <p class="full-name" id="nama-wanita"></p>
+            <p class="parents" id="ortu-wanita"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote">
+        <p id="kutipan"></p>
+        <span id="sumber-kutipan"></span>
+      </section>
+
+      <section class="countdown-section">
+        <p class="eyebrow">Menghitung hari</p>
+        <div class="countdown" id="countdown">
+          <div><strong id="d">0</strong><span>Hari</span></div>
+          <div><strong id="h">0</strong><span>Jam</span></div>
+          <div><strong id="m">0</strong><span>Menit</span></div>
+          <div><strong id="s">0</strong><span>Detik</span></div>
+        </div>
+        <p class="ended" id="ended" hidden>Acara telah berlangsung. Terima kasih.</p>
+      </section>
+
+      <section class="events">
+        <article class="card">
+          <p class="card-label">Akad Nikah</p>
+          <h3 id="tanggal-akad"></h3>
+          <p id="waktu-akad"></p>
+          <p class="place-name" id="tempat-akad"></p>
+          <p class="address" id="alamat-akad"></p>
+        </article>
+        <article class="card">
+          <p class="card-label">Resepsi</p>
+          <h3 id="tanggal-resepsi"></h3>
+          <p id="waktu-resepsi"></p>
+          <p class="place-name" id="tempat-resepsi"></p>
+          <p class="address" id="alamat-resepsi"></p>
+        </article>
+      </section>
+
+      <section class="map-section">
+        <p class="eyebrow">Lokasi</p>
+        <h2 class="script-title">Tempat Acara</h2>
+        <p class="place-name" id="tempat-map"></p>
+        <p class="address" id="alamat-map"></p>
+        <p class="dress" id="dress-code"></p>
+        <a class="btn" id="maps-link" target="_blank" rel="noopener">Buka Google Maps</a>
+      </section>
+
+      <section class="rsvp" id="rsvp-section" hidden>
+        <p class="eyebrow">Konfirmasi kehadiran</p>
+        <h2 class="script-title">RSVP</h2>
+        <p>Mohon konfirmasi kehadiran melalui WhatsApp.</p>
+        <a class="btn" id="wa-link" target="_blank" rel="noopener">Konfirmasi via WhatsApp</a>
+      </section>
+
+      <footer>
+        <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami</p>
+        <p class="footer-names" id="footer-names"></p>
+        <p>apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
+      </footer>
+    </main>
+     <script src="script.js" defer></script>
+
+      </body>
+</html>
