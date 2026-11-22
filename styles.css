@@ -273,3 +273,63 @@ footer {
   color: var(--primary-color);
   margin: 0.5rem 0;
 }
+/* Floating Music Button */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 2px solid var(--white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(125, 107, 93, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Floating Music Button */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 2px solid var(--white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(125, 107, 93, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.music-btn[hidden] {
+  display: none;
+}
+
+.music-btn:hover {
+  background-color: var(--accent-color);
+}
+
+.music-btn.playing {
+  animation: spinMusic 4s linear infinite;
+}
+
+@keyframes spinMusic {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

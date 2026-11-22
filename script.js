@@ -129,3 +129,43 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCountdown();
   const timerInterval = setInterval(updateCountdown, 1000);
 });
+  // --- Tombol Buka Undangan & Kontrol Musik ---
+  const openBtn = document.getElementById("open-btn");
+  const cover = document.getElementById("cover");
+  const invitation = document.getElementById("invitation");
+  const rsvpSection = document.getElementById("rsvp-section");
+  const bgMusic = document.getElementById("bg-music");
+  const musicToggle = document.getElementById("music-toggle");
+
+  openBtn.addEventListener("click", () => {
+    cover.classList.add("hidden");
+    invitation.hidden = false;
+    if (rsvpSection) rsvpSection.hidden = false;
+    if (musicToggle) musicToggle.hidden = false;
+
+    // Putar musik otomatis saat tombol Buka Undangan diklik
+    if (bgMusic) {
+      bgMusic.play().then(() => {
+        musicToggle.classList.add("playing");
+      }).catch((err) => {
+        console.log("Autoplay dicegah browser:", err);
+      });
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Tombol Play/Pause di pojok layar
+  if (musicToggle && bgMusic) {
+    musicToggle.addEventListener("click", () => {
+      if (bgMusic.paused) {
+        bgMusic.play();
+        musicToggle.classList.add("playing");
+        musicToggle.textContent = "🎵";
+      } else {
+        bgMusic.pause();
+        musicToggle.classList.remove("playing");
+        musicToggle.textContent = "🔇";
+      }
+    });
+  }
